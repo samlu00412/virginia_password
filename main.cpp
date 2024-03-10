@@ -4,15 +4,15 @@
 typedef long long LL;
 using namespace std;
 
-string test(LL goout,string sentence);
+void test(LL goout,string sentence);
 bool checkspace(string s);
 
-string encryption(string input,string keyword){
+void encryption(string input,string keyword){
     LL i;
-
+    
 }
-string decryption(string input,string keyword){
-
+void decryption(string input,string keyword){
+    
 }
 bool checkspace(string s){
     LL count;
@@ -22,7 +22,7 @@ bool checkspace(string s){
     }
     return (count != s.size());
 }
-string test(LL goout,string sentence){
+void test(LL goout,string sentence){
     while(!(goout)){
         if(checkspace(sentence)){
             cout << "Wrong format! Please reinput the key." << endl;
@@ -31,7 +31,6 @@ string test(LL goout,string sentence){
         else
             goout = 1;
     }
-    return sentence;
 }
 int main(){
     string origin,key;
@@ -39,7 +38,7 @@ int main(){
     LL i;
     char mode;
     cout << "Please select the mode. (E for encryption, and D for decryption.)" << endl;
-    
+    cin >> mode;
     while (!(checkmode)){
         if(mode == 'E'){
             checkmode = 1;
@@ -48,7 +47,7 @@ int main(){
             cout << "Please input your key to encrypt the sentence." << endl;
             cin >> key;
             test(0,key);
-            
+            encryption(origin,key);
         }
         else if(mode == 'D'){
             checkmode = 1;
@@ -57,8 +56,10 @@ int main(){
             cout << "Please input the key to decrypt the sentence." << endl;
             cin >> key;
         }
-        else
+        else{
             cout<< "Wrong format! Please select the mode. (E for encryption, and D for decryption.)" << endl;
+            cin >> mode;
+        }
     }
     return 0;
 }

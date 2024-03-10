@@ -8,6 +8,6 @@ int main(){
     LL i;
     string s;
     getline(cin,s);
-    cout << s.size();\
+    cout << s.size();
     return 0;
 }

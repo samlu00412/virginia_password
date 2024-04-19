@@ -57,7 +57,7 @@ int main(){
             cout << "Please input your key to encrypt the sentence.(space is banned)\n";
             cin >> key;
             encryption(origin,key);
-            cout << "Input b for exit, or select the mode. (e for encryption, or d for decryption.)\n";
+            cout << "\nInput b for exit, or select the mode. (e for encryption, or d for decryption.)\n";
             cout.flush();
             cin >> mode;
         }
@@ -68,7 +68,7 @@ int main(){
             cout << "Please input the key to decrypt the sentence.(space is banned)\n";
             cin >> key;
             decryption(origin,key);
-            cout << "Input b for exit, or select the mode. (e for encryption, or d for decryption.)\n";
+            cout << "\nInput b for exit, or select the mode. (e for encryption, or d for decryption.)\n";
             cout.flush();
             cin >> mode;
         }
